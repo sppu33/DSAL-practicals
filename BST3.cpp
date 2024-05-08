@@ -24,10 +24,10 @@ class Node{
     Node* right;
 
     Node(const string& k, const string& m){
-    string key=k;
-    string meaning=m;
-    Node* left=nullptr;
-    Node* right=nullptr;
+    key=k;
+    meaning=m;
+    left=nullptr;
+    right=nullptr;
     }
 };
 
@@ -62,7 +62,7 @@ class Dict{
         }
         return root;
     }
-//************************************************************//
+////
     Node* remove(Node* root,const string& key){
         if(root==nullptr){
             return root;
@@ -108,7 +108,7 @@ class Dict{
             reverseInOrder(root->left);
         }
     }
-//*************************************************************//
+//*//
 //use of constant and string&
     int maxcomp(Node* root) const{
         if(root==nullptr){
@@ -121,7 +121,7 @@ class Dict{
 
     public:
     Dict(){
-        Node* root= nullptr;
+        root= nullptr;
     }
 
     void add(const string& key, const string& meaning) {
@@ -151,7 +151,9 @@ class Dict{
 int main(){
     Dict D;
     int choice;
-    cout<<"\n 1. add "<<"\n 2. update"<<"\n 3. remove"<<" \n 4.ascending"<<"\n 5.descending"<<"\n 6. max comparisons"<<" 7. exit"<<endl;
+    bool flag=true;
+    while(flag){
+    cout<<"\n 1. add "<<"\n 2. update"<<"\n 3. remove"<<" \n 4.ascending"<<"\n 5.descending"<<"\n 6. max comparisons"<<"\n 7. exit"<<endl;
     cin>>choice;
     string k,m;
     switch(choice)
@@ -180,9 +182,11 @@ int main(){
         D.displayDescending();
         break;
     case 6:
-        D.getMaxComparisons();
+        cout<<D.getMaxComparisons()<<endl;
         break;
     default:
+        flag=false;
         return 0;
+        }
     }
 }
