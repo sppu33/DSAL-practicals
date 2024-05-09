@@ -90,7 +90,7 @@ class file{
 };
 
 int main(){
-    file f("samplpe.txt");
+    file f("sample.txt");
     int choice,roll;
     cout << "Menu:" << endl;
     cout << "1. Add Record" << endl;
