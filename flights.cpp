@@ -43,10 +43,11 @@ int flight::create()
 		cin>>d;
 		for(j=0;j<10;j++)
 		{
+			//if source city is already present in city_index
 			if(strcmp(city_index[j],s)==0)
 			break;
 		}
-		if(j==10)
+		if(j==10)	// source city is not present in city_index
 		{
 			strcpy(city_index[city_count],s);
 			city_count++;
